@@ -5,6 +5,7 @@ def opcion()
         3.Tijeras
         4.Exit\n"
 end
+
 def jugador_one(n)
     choice_p1 = 'error' if n != 1 || n != 2 || n != 3 || n != 4
     choice_p1 = 'piedra' if n == 1
@@ -13,6 +14,7 @@ def jugador_one(n)
     choice_p1 = 'salir' if n == 4
     return choice_p1
 end
+
 def jugador_two(n)
     choice_p2 = 'error' if n != 1 || n != 2 || n != 3 || n != 4
     choice_p2 = 'piedra' if n == 1
@@ -21,9 +23,11 @@ def jugador_two(n)
     choice_p2 = 'salir' if n == 4
     return choice_p2
 end
+
 puts "Turno del 'Jugador uno!!' \nElije una opcion"
 opcion()
 player_1 = gets.chomp.to_i
+
 if jugador_one(player_1) == 'piedra'||jugador_one(player_1) == 'papel'||jugador_one(player_1) == 'tijeras'
     print "Eleccion del jugador uno: \n"
     puts jugador_one(player_1).capitalize!
@@ -37,9 +41,11 @@ else
         puts jugador_one(player_1).capitalize!   
     end
 end
+
 puts "Turno del 'Jugador uno!!' \nElije una opcion"
 opcion()
 player_2 = gets.chomp.to_i
+
 if jugador_two(player_2) == 'piedra'||jugador_two(player_2) == 'papel'||jugador_two(player_2) == 'tijeras'
     print "Eleccion del jugador uno: \n"
     puts jugador_two(player_2).capitalize!
@@ -53,6 +59,7 @@ else
         puts jugador_two(player_2).capitalize!   
     end
 end
+
 puts "\nEl resultado es...     !!!\n"
 puts 'Piedra le gana a Tijeras' if jugador_one(player_1) == 'tijeras' && jugador_two(player_2) == 'piedra' 
 puts 'Piedra le gana a Tijeras' if jugador_one(player_1) == 'piedra' && jugador_two(player_2) == 'tijeras'
