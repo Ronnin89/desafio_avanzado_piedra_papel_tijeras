@@ -55,7 +55,7 @@ else
     while jugador_two(player_2) == 'error' do 
         puts"Opcion invalida!! \nElije una opcion del 1 al 4"
         player_2 = gets.chomp.to_i
-        print "Eleccion del jugador uno: \n"
+        print "Eleccion del jugador dos: \n"
         puts jugador_two(player_2).capitalize!   
     end
 end
